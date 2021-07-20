@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a th:href="@{Create}">Thêm mới khách hàng</a>
+<table border="1 solid" width="30%">
+    <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Img</th>
+        <th colspan="2">Action</th>
+    </tr>
+    <tr th:each="C:${Customer}">
+        <td th:text="${C.name}"></td>
+        <td th:text="${C.address}"></td>
+        <td><img th:src="@{'/i/'+${C.img}}" alt="" width="100px"></td>
+        <td><a th:href="@{Remove(id=${C.id})}">Remove</a></td>
+        <td><a th:href="@{Update(id=${C.id})}">Update</a></td>
+    </tr>
+</table>
+</body>
+</html>

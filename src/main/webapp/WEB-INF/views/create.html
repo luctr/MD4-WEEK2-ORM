@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="" method="post" th:object="${obj}" enctype="multipart/form-data" >
+    <h2>Điền đầy đủ thông tin vào form</h2>
+    <fieldset>
+        <legend>Form Tạo Mới Khách Hàng</legend>
+        <div>
+            <label>Name</label>
+            <input type="text" th:field="*{name}" placeholder="Name">
+        </div>
+
+        <div>
+            <label>Address</label>
+            <input type="text" th:field="*{address}" placeholder="Address">
+        </div>
+        <div>
+            <label>Email</label>
+            <input type="email" th:field="*{email}" placeholder="Email">
+        </div>
+
+        <div>
+            <label>IMG</label>
+            <input type="file" th:field="*{img}" placeholder="IMG">
+        </div>
+
+        <div>
+            <button type="submit">Save</button>
+        </div>
+    </fieldset>
+
+
+</form>
+</body>
+</html>
